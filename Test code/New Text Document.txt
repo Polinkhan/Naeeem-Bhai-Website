@@ -1,0 +1,33 @@
+import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
+
+function App() {
+  let M_Run_Time = 0;
+
+  return (
+    <div>
+      <Btn />
+ 
+    </div>
+  );
+}
+
+const Btn = () => {
+  const [Memory1, SetMemory1] = useState(0);
+  return (
+    <div>
+      <button
+        onClick={() => {
+          SetMemory1((prev) => prev + 1);
+        }}
+      >
+        Start Motor
+      </button>
+
+      <p>Run Time = {Memory1} </p>
+    </div>
+  );
+};
+
+export default App;
